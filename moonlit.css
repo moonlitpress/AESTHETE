@@ -683,3 +683,239 @@ main {
     padding-right: 6vw;
   }
 }
+
+/* =========================================================
+   PORTFOLIO / PHOTOGRAPHY PAGES
+   ========================================================= */
+
+.portfolio-hero {
+  width: min(1180px, 90vw);
+  margin: 0 auto;
+  padding: 150px 0 120px;
+}
+
+.portfolio-hero h1 {
+  margin: 0;
+  font-family: "Cinzel", Georgia, serif;
+  font-size: clamp(55px, 9vw, 125px);
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  line-height: 0.95;
+}
+
+.portfolio-rule {
+  width: 100%;
+  max-width: 900px;
+  height: 1px;
+  margin: 50px 0 35px;
+  background: var(--line);
+}
+
+.portfolio-intro {
+  max-width: 720px;
+  margin: 0;
+  font-size: clamp(22px, 2.5vw, 32px);
+  font-weight: 300;
+  line-height: 1.4;
+}
+
+.photo-feature {
+  width: min(1180px, 90vw);
+  margin: 0 auto;
+}
+
+.image-placeholder {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(242, 238, 229, 0.045),
+      transparent 48%,
+      rgba(242, 238, 229, 0.025)
+    );
+  border: 1px solid var(--line);
+}
+
+.image-placeholder::before,
+.image-placeholder::after {
+  content: "";
+  position: absolute;
+  background: var(--soft-line);
+}
+
+.image-placeholder::before {
+  width: 65%;
+  height: 1px;
+  transform: rotate(-10deg);
+}
+
+.image-placeholder::after {
+  width: 1px;
+  height: 65%;
+  transform: rotate(10deg);
+}
+
+.image-placeholder span {
+  position: relative;
+  z-index: 1;
+  font-family: "Cinzel", Georgia, serif;
+  font-size: 11px;
+  letter-spacing: 0.28em;
+}
+
+.image-placeholder-large {
+  aspect-ratio: 16 / 9;
+}
+
+.image-caption {
+  display: grid;
+  grid-template-columns: 70px 1fr;
+  gap: 25px;
+  padding: 18px 0 0;
+  color: var(--muted);
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 25px;
+}
+
+.image-caption span {
+  font-family: "Cinzel", Georgia, serif;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+}
+
+.image-caption p {
+  margin: 0;
+  font-size: 17px;
+}
+
+.photo-grid-section {
+  width: min(var(--max-width), 90vw);
+  margin: 0 auto;
+  padding: 150px 0;
+}
+
+.portfolio-section-heading {
+  margin-bottom: 55px;
+}
+
+.portfolio-section-heading h2 {
+  margin: 0;
+  font-family: "Cinzel", Georgia, serif;
+  font-size: clamp(28px, 4vw, 52px);
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  line-height: 1.1;
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 70px 35px;
+}
+
+.photo-item {
+  min-width: 0;
+}
+
+.photo-item:nth-child(even) {
+  margin-top: 90px;
+}
+
+.photo-meta {
+  display: grid;
+  grid-template-columns: 35px 1fr;
+  column-gap: 15px;
+  padding-top: 18px;
+}
+
+.photo-meta > span {
+  grid-row: span 2;
+  color: var(--muted);
+  font-family: "Cinzel", Georgia, serif;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+}
+
+.photo-meta h3 {
+  margin: 0 0 2px;
+  font-family: "Cinzel", Georgia, serif;
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+}
+
+.photo-meta p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 16px;
+}
+
+.portfolio-contact {
+  width: min(1180px, 90vw);
+  margin: 0 auto;
+  padding: 130px 0;
+  border-top: 1px solid var(--line);
+}
+
+.portfolio-contact h2 {
+  margin: 0 0 30px;
+  font-family: "Cinzel", Georgia, serif;
+  font-size: clamp(38px, 6vw, 78px);
+  font-weight: 400;
+  letter-spacing: 0.07em;
+  line-height: 1.05;
+}
+
+.portfolio-contact > p:not(.eyebrow) {
+  max-width: 600px;
+  margin: 0;
+  font-size: 21px;
+  line-height: 1.5;
+}
+
+.portfolio-back {
+  width: min(1180px, 90vw);
+  margin: 0 auto;
+  padding: 0 0 120px;
+}
+
+@media (max-width: 700px) {
+
+  .portfolio-hero {
+    padding: 100px 0 80px;
+  }
+
+  .photo-feature {
+    width: 90vw;
+  }
+
+  .photo-grid-section {
+    padding: 100px 0;
+  }
+
+  .photo-grid {
+    grid-template-columns: 1fr;
+    gap: 55px;
+  }
+
+  .photo-item:nth-child(even) {
+    margin-top: 0;
+  }
+
+  .image-placeholder-large {
+    aspect-ratio: 4 / 3;
+  }
+
+  .portfolio-contact {
+    padding: 100px 0;
+  }
+
+  .portfolio-back {
+    padding-bottom: 90px;
+  }
+}
